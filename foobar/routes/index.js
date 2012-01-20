@@ -1,8 +1,14 @@
+(function() {
+  var Post;
 
-/*
- * GET home page.
- */
+  Post = require("../models/post.js");
 
-exports.index = function(req, res){
-  res.render('index', { title: 'Express' })
-};
+  exports.post = function(req, res) {
+    return new Post({
+      title: req.body.title,
+      author: req.body.author,
+      content: req.body.content
+    }).save();
+  };
+
+}).call(this);
