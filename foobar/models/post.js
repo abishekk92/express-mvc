@@ -1,14 +1,14 @@
 (function() {
-  var Objectid, Schema, mongoose, postSchema;
+  var ObjectId, Schema, mongoose, postSchema;
 
   mongoose = require('mongoose');
 
   Schema = mongoose.schema;
 
-  Objectid = Schema.ObjectId;
+  ObjectId = Schema.ObjectId;
 
   postSchema = new Schema({
-    author: Objectid({
+    author: ObjectId({
       title: String({
         content: String
       })

@@ -1,9 +1,9 @@
 mongoose=require 'mongoose'
 Schema=mongoose.schema
-Objectid=Schema.ObjectId
+ObjectId=Schema.ObjectId
 
 postSchema= new Schema 
-		  author:Objectid
+		  author:ObjectId
 	          title: String
                   content: String 
 		  date: Date
